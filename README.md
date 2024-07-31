@@ -1,6 +1,6 @@
-# 🌟 Agência de Quadras de Futebol Society 🌟
+# 🌟 Agência de Arena de Futebol Society 🌟
 
-Bem-vindo ao repositório da nossa agência especializada em quadras de futebol society! Aqui você encontrará informações sobre o projeto e como contribuir para o seu desenvolvimento.
+Bem-vindo ao repositório da nossa agência especializada em arenas de futebol society! Aqui você encontrará informações sobre o projeto e como contribuir para o seu desenvolvimento.
 
 ## 🚀 Instruções de Instalação
 
@@ -22,7 +22,7 @@ Bem-vindo ao repositório da nossa agência especializada em quadras de futebol 
 
 ## 💡 Funcionalidades e Recursos Previstos
 
-- Agendamento de horários para as quadras.
+- Agendamento de horário de jogo.
 - Reservas online com confirmação por e-mail.
 - Avaliações e feedback dos clientes.
 
