@@ -1,0 +1,26 @@
+.form {
+    display: flexbox;
+    flex-direction: column;
+    margin: 25px;
+    width: fit-content;
+    height: fit-content;
+}
+.group {	
+    margin: 0 auto;
+    height: 96px;
+    max-width: 564px;
+}
+
+.button {
+    margin-right: 50%;
+    margin-top: 5%;
+    margin-left: 30%;
+    width: 250px;
+    height: 35px;
+    background-color: #189E00;
+    color: #FFFFFF;
+}
+.group input {
+    background-color: #34224C;
+    border-radius: 20px;
+}
