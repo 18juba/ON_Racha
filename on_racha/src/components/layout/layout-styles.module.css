@@ -1,0 +1,13 @@
+.FullPage {
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    position: fixed;
+    margin-left: -8px;
+    margin-top: 0px;
+    overflow-y: hidden;
+    background: linear-gradient(104deg, rgba(0,0,0,1) -23%, rgba(54,25,25,1) 100%);
+    z-index: -1; /* Define o z-index baixo para ficar atrás dos outros elementos */
+  }
+  

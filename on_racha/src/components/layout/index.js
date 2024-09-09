@@ -1,10 +1,10 @@
 import React from "react"
-import "./styles.css"
+import styles from "./layout-styles.module.css"
 
 export default function LayoutComponent({children}){
     return(
         <>
-            <div className="FullPage">
+            <div className={styles.FullPage}>
                 {children}
             </div>
         </>

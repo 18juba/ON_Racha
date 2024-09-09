@@ -34,7 +34,7 @@ const LoginForm = () => {
 									placeholder="Enter email"
 									value={email}
 									onChange={(e) => setEmail(e.target.value)}
-								></Form.Control>
+								/>
 								
 							</Form.Group>
 
@@ -54,6 +54,7 @@ const LoginForm = () => {
 							</Button>
 						</Form>
 					</CenterPainel>
+					<a className='anchorBotton' href='Formulario'>Cadastre-se</a>
 				</Col>
 			</Row>
 		</Container>
