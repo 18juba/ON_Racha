@@ -18,7 +18,7 @@ export default function GenericForm({ formConfig, urlSuffix, entites, setEntitie
 				<Col xs={12} md={6}>
 					<div className='CenterPainel'>
 						<div className='Header'>
-							<Image src='./logo_prototype.png' alt='logo' />
+							<Image src='./ON_RACHA-removebg-preview (1).svg' alt='logo' />
 							<h2 className="title">{title}</h2>
 						</div>
 						<Form onSubmit={onSubmit} className='form'>
