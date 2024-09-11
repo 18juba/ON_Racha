@@ -24,3 +24,13 @@
     background-color: #34224C;
     border-radius: 20px;
 }
+
+.anchorBotton{  
+    height: 20px;
+    width: 600px;
+    font-family: "Chakra Petch";
+    font-size: larger;
+    align-items: initial;
+    margin-left: 20%;
+    color: #ffffff;
+}
