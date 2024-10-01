@@ -1,20 +1,28 @@
 import React, { useEffect, useState } from "react"
-import styles from "./layout-styles.module.css"
+import "./layout-styles.module.css"
 import LoadingSpinner from "../Loading";
+import Sidebar from "../sideBar";
+import Topbar from "../topbar";
 
-export default function LayoutComponent({children}){
+export default function LayoutComponent({ children }) {
     const [loading, setLoading] = useState(true);
 
-	useEffect(() => {
-	  // Simula uma operação de carregamento (API, etc.)
-	  const timer = setTimeout(() => setLoading(false), 3000);
-	  return () => clearTimeout(timer);
-	}, []);
+    useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 3000);
+        return () => clearTimeout(timer);
+    }, []);
 
-    return(
+    return (
         <>
-            <div className={styles.FullPage}>
-            {loading? <LoadingSpinner /> : children}
+            <div className="FullPage">
+                <div className="sidebar">
+                    <Sidebar />
+                </div>
+                <div className="topBar">
+                    <p>teste</p>
+                    <Topbar />
+                </div>
+                {loading ? <LoadingSpinner /> : children}
             </div>
         </>
     )

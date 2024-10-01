@@ -3,13 +3,18 @@ import React, { useEffect, useState } from 'react';
 import { Form, Button, Container, Row, Col, Image, InputGroup } from 'react-bootstrap';
 import "./styles.css"
 import { CenterPainel, Header } from './styled';
+import { handleSubmit } from '../genericComponents/GenericForm/utils';
+
 const LoginForm = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
 
-	const handleSubmit = (e) => {
+	const Login = (e) => {
+		
 		e.preventDefault();
+
+		handleSubmit("login", {email, password})
 		// Lógica de autenticação aqui
 		console.log('Email:', email);
 		console.log('Password:', password);
@@ -28,7 +33,7 @@ const LoginForm = () => {
 							<h2 className="text-center"> Faça Login</h2>
 						</Header>
 
-						<Form onSubmit={handleSubmit}>
+						<Form onSubmit={Login}>
 
 							<Form.Group className='group' controlId="formBasicEmail">
 
@@ -59,9 +64,7 @@ const LoginForm = () => {
 						</Form>
 
 					</CenterPainel>
-					{/* <div className='extend-footer'> */}
-						<a className='anchorBotton' href='Formulario'>Cadastre-se</a>
-					{/* </div> */}
+						<a className='anchorBotton' href='Signup'>Cadastre-se</a>
 				</Col>
 			</Row>
 		</Container>

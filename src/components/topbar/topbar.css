@@ -1,0 +1,65 @@
+/* src/Topbar.css */
+
+/* Estilo geral da topbar */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 170px; /* Define a distância da borda esquerda */
+    right: 0;
+    width: calc(100% - 170px); /* A largura agora é calculada subtraindo os 150px */
+    background-color: #442A78;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 2px -2px gray;
+    z-index: 1000;
+  }
+  
+  /* Estilo para o logo */
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  /* Estilo para a navegação */
+  nav {
+    flex-grow: 1;
+    text-align: right;
+  }
+  
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+  .nav-links li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  
+    .nav-links li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+  

@@ -25,10 +25,102 @@
     border-radius: 20px;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.multiple-row {
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.single-row {
+    margin-left: 65%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.form-row{
+    /* margin-left: 42%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.control {
+    margin: 3px;
+}
+
+.title {
+    font-family: 'Chakra Petch';
+    font-weight: 400;
+    font-size: 50px;
+    line-height: auto;
+    letter-spacing: 10%;
+    text-align: left;
+    vertical-align: middle;
+    margin-top: -2px;
+
+}
+
+.CenterPainel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #433266;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+	width: 700px;
+	height: 700px;
+    border-radius: 5%;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.Header {
+    margin-top: 5px;
+    margin-left: 10%;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    width: 80%
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 96px;
+    max-width: 564px;
+}
+
+
+.input {
+    background-color: #34224C;
+    border: transparent;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+    margin: 5px;
+    width: 270px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+
 .anchorBotton{  
     height: 20px;
     width: 600px;
-    font-family: "Chakra Petch";
     font-size: larger;
     align-items: initial;
     margin-left: 20%;
