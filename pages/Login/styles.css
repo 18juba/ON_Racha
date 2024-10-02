@@ -1,5 +1,6 @@
 .Container {
-    margin-left: 50px;
+    margin: 50px;
+    margin-top: 5%;
     display: flex;
     justify-content: center;
 }

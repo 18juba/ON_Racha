@@ -1,65 +1,85 @@
-/* src/Topbar.css */
 
-/* Estilo geral da topbar */
 .topbar {
-    position: fixed;
-    top: 0;
-    left: 170px; /* Define a distância da borda esquerda */
-    right: 0;
-    width: calc(100% - 170px); /* A largura agora é calculada subtraindo os 150px */
-    background-color: #442A78;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    box-shadow: 0 4px 2px -2px gray;
-    z-index: 1000;
-  }
-  
-  /* Estilo para o logo */
-  .logo {
+  position: fixed;
+  top: 0;
+  left: 187px;
+  right: 0;
+  width: calc(100% - 187px); 
+  background-color: #442A78;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 4px 2px -2px gray;
+  z-index: 1000;
+  transition: left 0.3s ease, width 0.3s ease; /* Transição suave para a largura e posição */
+}
+
+.topbar-extend {
+  position: fixed;
+  top: 0;
+  left: 0; 
+  right: 0;
+  width: 100%; 
+  background-color: #442A78;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 4px 2px -2px gray;
+  z-index: 1000;
+  transition: left 0.3s ease, width 0.3s ease; /* Suavizando a transição de volta */
+}
+
+
+/* Estilo para o logo */
+.logo {
     font-size: 1.5em;
     font-weight: bold;
-  }
-  
-  /* Estilo para a navegação */
-  nav {
+}
+
+/* Estilo para a navegação */
+nav {
     flex-grow: 1;
-    text-align: right;
-  }
-  
-  .nav-links {
+    display: flex;
+    justify-content: flex-end; /* Alinha os itens da navegação à direita */
+    margin-right: 50px;
+}
+
+/* Estilo para os links de navegação */
+.nav-links {
     list-style: none;
     margin: 0;
+    margin-right: 50px;
     padding: 0;
     display: flex;
-  }
-  
-  .nav-links li {
+}
+
+.nav-links li {
     margin-left: 20px;
-  }
-  
-  .nav-links li a {
+}
+
+.nav-links li a {
     color: white;
     text-decoration: none;
     font-size: 1em;
-  }
-  
-  .nav-links li a:hover {
+}
+
+.nav-links li a:hover {
     text-decoration: underline;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
     .nav-links {
-      flex-direction: column;
-      align-items: flex-end;
+        flex-direction: column;
+        align-items: flex-end; /* Links continuam alinhados à direita em telas menores */
     }
-  
+
     .nav-links li {
-      margin-left: 0;
-      margin-bottom: 10px;
+        margin-left: 0;
+        margin-bottom: 10px;
     }
-  }
-  
+}

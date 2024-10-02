@@ -1,10 +1,12 @@
+
 import React, { useEffect, useState } from "react"
 import "./layout-styles.module.css"
 import LoadingSpinner from "../Loading";
 import Sidebar from "../sideBar";
 import Topbar from "../topbar";
+import { UserProvider } from "../../../contexts/useContext";
 
-export default function LayoutComponent({ children }) {
+export default function LayoutComponent({ children, bars = true}) {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -13,17 +15,22 @@ export default function LayoutComponent({ children }) {
     }, []);
 
     return (
-        <>
+        <UserProvider>
             <div className="FullPage">
-                <div className="sidebar">
-                    <Sidebar />
-                </div>
-                <div className="topBar">
-                    <p>teste</p>
-                    <Topbar />
-                </div>
+                {bars ? (
+                    <div>
+                        <div>
+                            <Sidebar />
+                        </div>
+                        <div className="topBar">
+                            <Topbar />
+                        </div>
+                    </div>
+                )
+                    :
+                    null}
                 {loading ? <LoadingSpinner /> : children}
             </div>
-        </>
+        </UserProvider>
     )
 }

@@ -3,16 +3,28 @@ import { Form, Button, Container, Row, Col, Image, InputGroup } from 'react-boot
 import './styles.css';
 import { handleSubmit } from './utils'; // Certifique-se de que esta função está implementada corretamente
 
-export default function GenericForm({ formConfig, urlSuffix, entites, setEntities, title, beforeFinish = true, checkInputs = true }) {
+export default function GenericForm({ formConfig, urlSuffix, entites, setEntities, title, beforeFinish = true, checkInputs = false, postEvent }) {
 	const [currentRow, setCurrentRow] = useState(0)
 	const onSubmit = (e) => {
+		console.log("post:", postEvent)
 		e.preventDefault();
-		if (checkInputs(entites, currentRow)) {
+		if (checkInputs && checkInputs(entites, currentRow)) {
 			if (Object.keys(formConfig).length > 1) {
 				currentRow + 1 !== Object.keys(formConfig).length ?
 					setCurrentRow(currentRow + 1)
 					:
-					beforeFinish(entites) ? handleSubmit(urlSuffix, beforeFinish(entites)) : null
+					beforeFinish(entites) ? handleSubmit(urlSuffix, beforeFinish(entites), postEvent) : null
+			}
+		} else {
+			console.log("esta aqui", Object.keys(formConfig).length)
+			if (Object.keys(formConfig).length > 1) {
+				console.log("aquiiiii")
+				currentRow + 1 !== Object.keys(formConfig).length ?
+					setCurrentRow(currentRow + 1)
+					:
+					beforeFinish(entites) ? handleSubmit(urlSuffix, beforeFinish(entites), postEvent) : null
+			} else {
+				beforeFinish(entites) ? handleSubmit(urlSuffix, beforeFinish(entites), postEvent) : null
 			}
 		}
 	};

@@ -4,21 +4,27 @@ import { Form, Button, Container, Row, Col, Image, InputGroup } from 'react-boot
 import "./styles.css"
 import { CenterPainel, Header } from './styled';
 import { handleSubmit } from '../genericComponents/GenericForm/utils';
+import { useUserStore } from '../../../stores/usersStore';
+
 
 const LoginForm = () => {
+	const {setEntity} =useUserStore()
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
-
+	const postEvent = (response) => {
+		console.log(response.data.user)
+		localStorage.setItem("user", JSON.stringify(response.data.user));
+		localStorage.setItem("authToken", response.data.access_token)
+		return true
+	}
 	const Login = (e) => {
 		
 		e.preventDefault();
-
-		handleSubmit("login", {email, password})
-		// Lógica de autenticação aqui
-		console.log('Email:', email);
-		console.log('Password:', password);
+		
+		handleSubmit("login", {email, password},postEvent)
 	};
+
 
 	return (
 		<Container>

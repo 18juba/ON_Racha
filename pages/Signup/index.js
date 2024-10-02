@@ -69,7 +69,7 @@ export default function FormularioCadastro() {
     }
 
     return (
-        <LayoutComponent>
+        <LayoutComponent bars={false}>
             <div className="Container">
                 <GenericForm checkInputs={confirmEntity} title={"Cadastre-se"} formConfig={formConfig} entites={entity} setEntities={setEntity} urlSuffix={"users"} beforeFinish={beforeFinish} />
             </div>
