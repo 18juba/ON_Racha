@@ -1,5 +1,5 @@
 import LayoutComponent from "@/components/layout";
-import { LoginComponent } from "./loginComponent";
+import { LoginComponent } from "../../src/components/Login/loginComponent";
 
 export default function Login() {
     return(

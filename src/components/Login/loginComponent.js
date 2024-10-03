@@ -1,8 +1,8 @@
 import "./styles.css"
 import GenericForm from "@/components/genericComponents/GenericForm";
 import { useState } from "react";
-import { useUser } from "../../contexts/useContext";
-import { useUserStore } from "../../stores/usersStore";
+import { useUser } from "../../../contexts/useContext";
+import { useUserStore } from "../../../stores/usersStore";
 
 export function LoginComponent() {
     const [entity, setFormEntity] = useState({})
