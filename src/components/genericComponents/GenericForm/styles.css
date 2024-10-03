@@ -90,6 +90,7 @@
     /* margin-top: 5%; */
     margin-left: 70%;
     font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
     width: 250px;
     height: 35px;
     background-color: #189E00;
@@ -112,7 +113,6 @@
 .anchorBotton{  
     height: 20px;
     width: 600px;
-    font-family: "Chakra Petch";
     font-size: larger;
     align-items: initial;
     margin-left: 20%;

@@ -1,14 +1,44 @@
 .FullPage {
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    height: 100vh;
-    position: fixed;
-    margin-left: -8px;
-    margin-top: 0px;
-    overflow-y: hidden;
-    background-color: #34224C;
-    /* background: linear-gradient(104deg, rgba(0,0,0,1) -23%, rgba(54,25,25,1) 100%); */
-    z-index: -1; /* Define o z-index baixo para ficar atrás dos outros elementos */
-  }
-  
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  position: fixed;
+  margin-left: -8px;
+  margin-top: 0px;
+  overflow-y: hidden;
+  background-color: #ffff;
+  color: black;
+  /* background: linear-gradient(104deg, rgba(0,0,0,1) -23%, rgba(54,25,25,1) 100%); */
+  /* z-index: -1; */
+  /* Define o z-index baixo para ficar atrás dos outros elementos */
+}
+
+.topBar {
+  position: fixed;
+  top: 0;
+  left: 150px; /* Define a distância da borda esquerda */
+  right: 0;
+  width: calc(100% - 150px); /* A largura agora é calculada subtraindo os 150px */
+  background-color: #DC143C;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 4px 2px -2px gray;
+  /* z-index: 1000; */
+}
+
+.sidebar {
+  width: 150px;
+  background-color: #34224C;
+  color: white;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  overflow: hidden;
+  position: fixed;
+  z-index: 100;
+}

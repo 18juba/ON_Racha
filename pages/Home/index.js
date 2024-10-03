@@ -4,7 +4,7 @@ import LayoutComponent from "@/components/layout"
 export default function Home() {
     return (
         <> 
-            <LayoutComponent>
+            <LayoutComponent >
                 <div className="Header">
                     Head of the page
                 </div>

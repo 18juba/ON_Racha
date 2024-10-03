@@ -44,21 +44,24 @@ export async function makeConnection(endPoint: string, method: string, body?: Re
     }
     return response;
   } catch (error) {
-    if (error.response && error.response.status === 401) {
+
+    if (error.response && error.response.error === "Unauthenticated") {
       await getToken();
       config.headers.Authorization = `Bearer ${localStorage.getItem('authToken')}`;
-      switch (method) {
-        case "GET":
-          return await axios.get(url, config);
-        case "POST":
-          return await axios.post(url, body, config);
-        case "PUT":
-          return await axios.put(url, body, config);
-        case "DELETE":
-          return await axios.delete(url, config);
-      }
     }
+    switch (method) {
+      case "GET":
+        return await axios.get(url, config);
+      case "POST":
+        return await axios.post(url, body, config);
+      case "PUT":
+        return await axios.put(url, body, config);
+      case "DELETE":
+        return await axios.delete(url, config);
+    }
+
     console.error('Erro na requisição:', error);
     throw error;
   }
+
 }
