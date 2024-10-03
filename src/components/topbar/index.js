@@ -1,6 +1,6 @@
 // src/Topbar.js
 import React from 'react';
-import './Topbar.css';
+import './topbar.css';
 import { useUserStore } from '../../../stores/usersStore';
 import { useUser } from '../../../contexts/useContext';
 import { useSideStore } from '../../../stores/sidebar';
