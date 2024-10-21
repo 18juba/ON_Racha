@@ -3,7 +3,7 @@ import { Form, Button, Container, Row, Col, Image, InputGroup } from 'react-boot
 import './styles.css';
 import { handleSubmit } from './utils'; // Certifique-se de que esta função está implementada corretamente
 
-export default function GenericForm({ formConfig, urlSuffix, entites, setEntities, title, beforeFinish = true, checkInputs = false, postEvent }) {
+export default function GenericForm({ formConfig, urlSuffix, entites, setEntities, title, subtPath, beforeFinish = true, checkInputs = false, postEvent }) {
 	const [currentRow, setCurrentRow] = useState(0)
 	const onSubmit = (e) => {
 		console.log("post:", postEvent)
@@ -78,7 +78,7 @@ export default function GenericForm({ formConfig, urlSuffix, entites, setEntitie
 							</Button>
 						</Form>
 					</div>
-					<a className='anchorBotton' href='/'>Login</a>
+					<a className='anchorBotton' href={`/${subtPath.url}`}>{subtPath.label}</a>
 				</Col>
 			</Row>
 		</Container>
