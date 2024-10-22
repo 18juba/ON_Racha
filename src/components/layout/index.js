@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from "react"
-import "./layout-styles.module.css"
+import styles from "./layout-styles.module.css"
 import LoadingSpinner from "../Loading";
 import Sidebar from "../sideBar";
 import Topbar from "../topbar";
@@ -16,13 +16,13 @@ export default function LayoutComponent({ children, bars = true}) {
 
     return (
         <UserProvider>
-            <div className="FullPage">
+            <div className={styles.FullPage}>
                 {bars ? (
                     <div>
                         <div>
                             <Sidebar />
                         </div>
-                        <div className="topBar">
+                        <div className={styles.topBar}>
                             <Topbar />
                         </div>
                     </div>

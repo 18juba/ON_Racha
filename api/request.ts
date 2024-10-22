@@ -44,8 +44,7 @@ export async function makeConnection(endPoint: string, method: string, body?: Re
     }
     return response;
   } catch (error) {
-
-    if (error.response && error.response.error === "Unauthenticated") {
+    if (error.response && error.response.data.error.includes("Unauthenticated")) {
       await getToken();
       config.headers.Authorization = `Bearer ${localStorage.getItem('authToken')}`;
     }

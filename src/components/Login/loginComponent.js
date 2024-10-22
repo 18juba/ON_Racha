@@ -38,7 +38,7 @@ export function LoginComponent() {
 
     return (
             <div className="Container">
-                <GenericForm formConfig={formConfig} urlSuffix={"login"} entites={entity} setEntities={setFormEntity} title={"Faça Login"} beforeFinish={beforeFinish} subtPath={{url: 'Signup', label: "Cadastre-se"}} postEvent={contextTheUser}/>
+                <GenericForm formConfig={formConfig} urlSuffix={"login"}  buttonLabel={"Entre"} entites={entity} setEntities={setFormEntity} title={"Faça Login"} beforeFinish={beforeFinish} subtPath={{url: 'Signup', label: "Cadastre-se"}} postEvent={contextTheUser}/>
             </div>
     )
 }

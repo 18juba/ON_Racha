@@ -7,7 +7,8 @@
   margin-left: -8px;
   margin-top: 0px;
   overflow-y: hidden;
-  background-color: #ffff;
+  background: rgb(40,6,43);
+  background: linear-gradient(104deg, rgba(40,6,43,1) -23%, rgba(2,15,38,1) 100%);
   color: black;
   /* background: linear-gradient(104deg, rgba(0,0,0,1) -23%, rgba(54,25,25,1) 100%); */
   /* z-index: -1; */

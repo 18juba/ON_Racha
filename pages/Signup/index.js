@@ -21,7 +21,7 @@ export default function FormularioCadastro() {
             fields: [
                 { id: 'nome', label: 'Username', type: 'text', placeholder: 'Username', defaultValue: '' },
                 { id: 'email', label: 'Email Address', type: 'email', placeholder: 'Email', defaultValue: '' },
-                { id: 'password', label: 'Password', type: 'password', placeholder: 'Password', defaultValue: '' },
+                { id: 'password', label: 'Password', type: 'password', placeholder: 'Password', defaultValue: '', bottomLabel: <span style={{color: 'yellow'}}><b>A senha deve conter Letras, numeros e um caractere especial</b></span>},
                 confirmPassword(entity.password) ? { id: 'confirmPassword', label: 'Confirm Password', type: 'password', placeholder: 'Confirm password', defaultValue: '' } : null
             ]
         },
@@ -63,7 +63,6 @@ export default function FormularioCadastro() {
             setEntity({ ...entity, created_at: moment(), tipo_user_id: "4" })
             return saveEntity
         } else {
-            console.log("deu erro", entity)
             return false
         }
     }
@@ -71,7 +70,7 @@ export default function FormularioCadastro() {
     return (
         <LayoutComponent bars={false}>
             <div className="Container">
-                <GenericForm checkInputs={confirmEntity} title={"Cadastre-se"} formConfig={formConfig} entites={entity} setEntities={setEntity} subtPath={{url:"Login", label: "Faça login"}} urlSuffix={"users"} beforeFinish={beforeFinish} />
+                <GenericForm checkInputs={confirmEntity} title={"Cadastre-se"} buttonLabel={"Cadastrar"} formConfig={formConfig} entites={entity} setEntities={setEntity} subtPath={{url:"Login", label: "Faça login"}} urlSuffix={"users"} beforeFinish={beforeFinish} />
             </div>
         </LayoutComponent>
     )

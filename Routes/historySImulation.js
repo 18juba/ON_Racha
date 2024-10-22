@@ -1,3 +1,6 @@
+import Router from "next/router"
 export default function GoToSite(endPoint){
-    window.location.href = `${endPoint}`
+    const router = Router
+    router.push(`/${endPoint}`)
+
 }

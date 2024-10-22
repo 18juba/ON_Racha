@@ -85,6 +85,7 @@
 }
 
 
+
 .button {
     margin-right: 50%;
     /* margin-top: 5%; */
@@ -95,6 +96,26 @@
     height: 35px;
     background-color: #189E00;
     color: #FFFFFF;
+}
+.button svg {
+    margin-top: 2%;
+    margin-left: 5%;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.button:hover svg {
+    transform: translateX(10px); /* Move o SVG 10px para a direita */
+}
+
+.button:active svg {
+    transform: translateX(350%); /* Move o SVG totalmente para a direita no clique */
+    transition: transform 0.5s ease; /* Animação mais rápida no clique */
+}
+
+.button svg {
+    margin-top: 2%;
+    margin-left: 5%;
 }
 
 .input {
