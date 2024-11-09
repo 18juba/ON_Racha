@@ -2,12 +2,13 @@
 .app {
     display: flex;
     align-items: flex-start;
+    --iconSize: 45px;
 }
 
 li {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .toggle-button {
@@ -19,7 +20,7 @@ li {
     border: none;
     z-index: 100000;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Adicionando transição suave */
+    transition: background-color 0.3s ease;
 }
 
 .toggle-button:hover {
@@ -37,7 +38,7 @@ li {
     overflow: hidden;
     position: fixed;
     z-index: 100;
-    transition: transform 0.5s ease; /* Transição suave para abrir/fechar a sidebar */
+    transition: transform 0.5s ease;
 }
 
 .sidebar.open {
@@ -56,18 +57,36 @@ li {
 .sidebar ul {
     list-style-type: none;
     padding: 0;
+    margin-bottom: 20%;
 }
 
 .sidebar ul li {
-    margin: 15px 0;
+    margin: 10px 0;
+    max-width: 188px;
+
 }
 
 .sidebar ul li a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s ease, text-decoration 0.3s ease; /* Suavizando a transição de cor e sublinhado */
+    transition: color 0.3s ease, text-decoration 0.3s ease; 
+    max-width: 188px;
 }
 
 .sidebar ul li a:hover {
-    text-decoration: underline;
+    text-shadow: 0 0 10px #5d6ae2;
+    transform: translateY(-5px);
+}
+.ballIcon {
+    max-width: var(--iconSize);
+    max-height: var(--iconSize);
+    margin-right: 10px;
+}
+
+.ListItems {
+    max-width: 188px;
+}
+.ListItems:hover {
+    text-shadow: 0 0 10px #5d6ae2;
+    transform: translateY(-5px);    
 }

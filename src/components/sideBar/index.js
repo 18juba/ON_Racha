@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import './styles.css';
 import { useSideStore } from '../../../stores/sidebar';
+import { Image } from 'react-bootstrap';
 
 export let openSideBar = (state) => {
 
 }
 
 const Sidebar = () => {
-    const {setISOpen, isOpen} = useSideStore()
+    const { setISOpen, isOpen } = useSideStore()
 
     const toggleSidebar = () => {
         setISOpen(!isOpen);
@@ -16,19 +17,27 @@ const Sidebar = () => {
     return (
         <div className="app">
             <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
-                <h2>Menu</h2>
+                <div style={{maxWidth: "188px"}}>
+                	<Image src='./logo_prototype-removebg-preview-redimensioned-150.png' alt='logo' />
+                </div>
                 <ul>
-                    <li>
-                        <img src='icons8-soccer-ball-48.png' alt='ballIcon' />
-                        <a href="Signup" style={{ fontSize: "50px" }}>Jogos</a>
+                    <li className='ListItems'>
+                        <img src='icons8-bola-de-futebol-2-40.png' className='ballIcon' alt='ballIcon' />
+                        <a href="Signup" style={{ fontSize: "40px" }}>Jogos</a>
                     </li>
-                    <li>
-                        <img src='icons8-championship-50.png' alt='ChampIcon' />
-                        <a href="/Login" style={{ fontSize: "25px" }}>Campeonatos</a>
+                    <li className='ListItems'>
+                        <img src='icons8-loja-online-50.png' className='ballIcon' alt='storeIcon' />
+                        <a href="/Login" style={{ fontSize: "30px" }}>Produtos</a>
                     </li>
-                    <li>
-                        <a href="Home" style={{ fontSize: "50px" }}>Home</a>
+                    <li className='ListItems'>
+                        <img src='icons8-conta-de-teste-48.png' className='ballIcon' alt='profileiCon' />
+                        <a href="Home" style={{ fontSize: "25px" }}>Perfil</a>
                     </li>
+                    <li className='ListItems'>
+                        <img src='icons8-configurações-48.png' className='ballIcon' alt='profileiCon' />
+                        <a href="Home" style={{ fontSize: "19px" }}>Configurações</a>
+                    </li>
+
                 </ul>
             </div>
         </div>

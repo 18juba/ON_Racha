@@ -70,7 +70,7 @@ export default function FormularioCadastro() {
     return (
         <LayoutComponent bars={false}>
             <div className="Container">
-                <GenericForm checkInputs={confirmEntity} title={"Cadastre-se"} buttonLabel={"Cadastrar"} formConfig={formConfig} entites={entity} setEntities={setEntity} subtPath={{url:"Login", label: "Faça login"}} urlSuffix={"users"} beforeFinish={beforeFinish} />
+                <GenericForm checkInputs={confirmEntity} title={"Cadastre-se"} buttonLabel={"Cadastrar"} formConfig={formConfig} entites={entity} setEntities={setEntity} subtPath={{url:"Login", label: "Faça login"}} urlSuffix={"new_user"} beforeFinish={beforeFinish} />
             </div>
         </LayoutComponent>
     )

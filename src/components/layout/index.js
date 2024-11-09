@@ -29,7 +29,9 @@ export default function LayoutComponent({ children, bars = true}) {
                 )
                     :
                     null}
-                {loading ? <LoadingSpinner /> : children}
+                <div className="children">
+                    {loading ? <LoadingSpinner /> : children}
+                </div>
             </div>
         </UserProvider>
     )

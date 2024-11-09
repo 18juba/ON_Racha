@@ -10,9 +10,6 @@
   background: rgb(40,6,43);
   background: linear-gradient(104deg, rgba(40,6,43,1) -23%, rgba(2,15,38,1) 100%);
   color: black;
-  /* background: linear-gradient(104deg, rgba(0,0,0,1) -23%, rgba(54,25,25,1) 100%); */
-  /* z-index: -1; */
-  /* Define o z-index baixo para ficar atrás dos outros elementos */
 }
 
 .topBar {
@@ -42,4 +39,11 @@
   overflow: hidden;
   position: fixed;
   z-index: 100;
+}
+
+.children {
+  height: 80%;
+  margin:auto;
+  padding: 2rem;
+  overflow-y: scroll;
 }
