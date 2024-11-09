@@ -9,9 +9,7 @@ const FormularioJogador = () => {
             <Row className="row">
                 <Col xs={3} className="d-flex align-items-center justify-content-center">
                     <Form.Group className="profile-picture">
-                        <Form.Control type="file" placeholder='+' className="plus-sign" > 
-                            sssss
-                        </Form.Control>
+                        <Form.Control type="file" placeholder='+' className="plus-sign" />
                     </Form.Group>
                 </Col>
                 <Col className='fistCol' xs={9}>
