@@ -1,8 +1,9 @@
 .content {
     display: grid;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     margin: 10%;
+    width: 75vw;
+    height: 70vh;
     overflow-y: auto;
 }

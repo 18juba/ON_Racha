@@ -68,10 +68,25 @@ export default function FormularioCadastro() {
     }
 
     return (
-        <LayoutComponent bars={false}>
+    <div className="background-sign">
+        <video autoPlay muted src="sign1.mp4" className="video-background">
+            {/* <source src="../../public/sign1.mp4" type="video/mp4" /> */}
+        </video>
+        {/* <LayoutComponent bars={false}> */}  
             <div className="Container">
-                <GenericForm checkInputs={confirmEntity} title={"Cadastre-se"} buttonLabel={"Cadastrar"} formConfig={formConfig} entites={entity} setEntities={setEntity} subtPath={{url:"Login", label: "Faça login"}} urlSuffix={"new_user"} beforeFinish={beforeFinish} />
+                <GenericForm
+                    checkInputs={confirmEntity}
+                    title={"Cadastre-se"}
+                    buttonLabel={"Cadastrar"}
+                    formConfig={formConfig}
+                    entites={entity}
+                    setEntities={setEntity}
+                    subtPath={{ url: "Login", label: "Faça login" }}
+                    urlSuffix={"new_user"}
+                    beforeFinish={beforeFinish}
+                />
             </div>
-        </LayoutComponent>
+        {/* </LayoutComponent> */}
+    </div>
     )
 }
